@@ -8,18 +8,23 @@
 // ==/UserScript==
 
 (function() {
-    var blockquoteButton = document.createElement("input");
-    blockquoteButton.type = "button";
-    blockquoteButton.value = "blockquotize";
-    blockquoteButton.onclick = function(event) {
-        var deliciousLunch = document.getElementsByClassName('empty')[0];
+    function blockquotize(event) {
+        console.log(event.target);
+        var deliciousLunch = event.target.parentNode.getElementsByTagName('textarea')[0];
         deliciousLunch.value = deliciousLunch.value.replace(/^/gm, '> ');
-        var sayForm = document.getElementsByClassName('say_form')[0];
-        sayForm.getElementsByTagName('textarea')[0].focus();
+        deliciousLunch
+        .focus();
     }
-    blockquoteButton.style.float = "right";
-    blockquoteButton.style.marginTop = "20px";
-    var sayIt = document.evaluate('//input[@name="commit"]', document, null, XPathResult.ANY_TYPE, null).iterateNext();
-    sayIt.parentNode.insertBefore(blockquoteButton, sayIt);
+    var sayIts = document.evaluate('//input[@name="commit"]', document.body, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+    for (var i = 0; i < sayIts.snapshotLength; i++) {
+    var blockquoteButton = document.createElement("input");
+        blockquoteButton.type = "button";
+        blockquoteButton.value = "blockquotize";
+        blockquoteButton.onclick = blockquotize;
+        blockquoteButton.style.float = "right";
+        blockquoteButton.style.marginTop = "20px";
+        var sayIt = sayIts.snapshotItem(i);
+        sayIt.parentNode.insertBefore(blockquoteButton, sayIt);
+    }
 })();
 
