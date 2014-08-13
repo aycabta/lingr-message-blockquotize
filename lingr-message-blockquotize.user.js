@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Lingr message blockquotize
 // @namespace  http://aycabta.github.io/
-// @version    0.3
+// @version    0.4.0
 // @description  benry
 // @match      http://lingr.com/
 // @copyright  2014+, You
