@@ -13,6 +13,8 @@ Add benry button.
 ### applied
 ![applied](applied.png)
 
+The "blockquotize" button is next to textarea, so you can move focus to the button by tab key.
+
 ### pressed button that is added
 ![applied](pressed.png)
 
