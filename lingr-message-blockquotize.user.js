@@ -17,7 +17,7 @@
     }
     var sayIts = document.evaluate('//input[@name="commit"]', document.body, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
     for (var i = 0; i < sayIts.snapshotLength; i++) {
-    var blockquoteButton = document.createElement("input");
+        var blockquoteButton = document.createElement("input");
         blockquoteButton.type = "button";
         blockquoteButton.value = "blockquotize";
         blockquoteButton.onclick = blockquotize;
