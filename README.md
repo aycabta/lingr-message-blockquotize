@@ -17,4 +17,3 @@ The "blockquotize" button is next to textarea, so you can move focus to the butt
 
 ### pressed button that is added
 ![applied](pressed.png)
-

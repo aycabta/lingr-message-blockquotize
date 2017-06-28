@@ -27,4 +27,3 @@
         sayIt.parentNode.insertBefore(blockquoteButton, sayIt);
     }
 })();
-
