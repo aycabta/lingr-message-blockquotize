@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name       Lingr message blockquotize
+// @license    MIT
 // @namespace  http://aycabta.github.io/
 // @version    0.4.0
 // @description  benry
